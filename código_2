@@ -1,0 +1,55 @@
+
+/*
+#include <iostream>
+
+enum State { SemRefrigerante, ComRefrigerante };
+enum Event { InserirMoeda, PressionarBotao };
+
+void LiberarRefrigerante() {
+    std::cout << "Refrigerante liberado!" << std::endl;
+}
+
+void MostrarMensagemSemRefrigerante() {
+    std::cout << "Sem refrigerante disponível. Insira moeda." << std::endl;
+}
+
+void MaquinaDeRefrigerante(Event e) {
+    static State s = SemRefrigerante;
+
+    switch (s) {
+        case SemRefrigerante:
+            switch (e) {
+                case InserirMoeda:
+                    s = ComRefrigerante;
+                    LiberarRefrigerante();
+                    break;
+                case PressionarBotao:
+                    MostrarMensagemSemRefrigerante();
+                    break;
+            }
+            break;
+        case ComRefrigerante:
+            switch (e) {
+                case InserirMoeda:
+                    LiberarRefrigerante();
+                    break;
+                case PressionarBotao:
+                    s = SemRefrigerante;
+                    MostrarMensagemSemRefrigerante();
+                    break;
+            }
+            break;
+    }
+}
+
+int main() {
+    // Simulando o uso da máquina de refrigerante
+    MaquinaDeRefrigerante(InserirMoeda);
+    MaquinaDeRefrigerante(PressionarBotao);
+    MaquinaDeRefrigerante(InserirMoeda);
+    MaquinaDeRefrigerante(PressionarBotao);
+
+    return 0;
+}
+
+*/

@@ -1,0 +1,83 @@
+/* 
+
+#include <iostream>
+#include <vector>
+
+class CadeadoEletronico {
+public:
+    CadeadoEletronico() : estado("inicial"), combinacao_correta({'4', '9', '1'}) {}
+
+    void inserir_digito(char digito) {
+        if (estado == "inicial") {
+            if (digito == combinacao_correta[0]) {
+                input_buffer.push_back(digito);
+                estado = "aceitou primeiro digito";
+                std::cout << estado << std::endl;
+            } else {
+                reset();
+                std::cout << "Digito incorreto. O dispositivo está bloqueado." << std::endl;
+            }
+        } else if (estado == "aceitou primeiro digito") {
+            if (digito == combinacao_correta[1]) {
+                input_buffer.push_back(digito);
+                estado = "aceitou primeiro e segundo digitos";
+                std::cout << estado << std::endl;
+            } else {
+                reset();
+                std::cout << "Digito incorreto. O dispositivo está bloqueado." << std::endl;
+            }
+        } else if (estado == "aceitou primeiro e segundo digitos") {
+            if (digito == combinacao_correta[2]) {
+                input_buffer.push_back(digito);
+                estado = "desbloqueado";
+                std::cout << estado << std::endl;
+                destravar();
+            } else {
+                reset();
+                std::cout << "Digito incorreto. O dispositivo está bloqueado." << std::endl;
+            }
+        } else if (estado == "desbloqueado") {
+            reset();
+            std::cout << "Dispositivo já está desbloqueado." << std::endl;
+        }
+    }
+
+private:
+    void reset() {
+        estado = "inicial";
+        input_buffer.clear();
+        bloquear();
+    }
+
+    void bloquear() {
+        std::cout << "O dispositivo está bloqueado" << std::endl;
+    }
+
+    void destravar() {
+        std::cout << "A trava foi destravada" << std::endl;
+    }
+
+    std::string estado;
+    std::vector<char> combinacao_correta;
+    std::vector<char> input_buffer;
+};
+
+int main() {
+    CadeadoEletronico cadeado;
+
+    while (true) {
+        char digito;
+        std::cout << "Digite um dígito (ou 'q' para sair): ";
+        std::cin >> digito;
+
+        if (digito == 'q') {
+            break;
+        }
+
+        cadeado.inserir_digito(digito);
+    }
+
+    return 0;
+}
+
+*/

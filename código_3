@@ -1,0 +1,76 @@
+/*
+#include <iostream>
+
+enum class EstadoCadeado {
+    TRANCADO,
+    DESTRANCADO,
+    ABERTO
+};
+
+class Cadeado {
+private:
+    EstadoCadeado estadoAtual;
+
+public:
+    Cadeado() : estadoAtual(EstadoCadeado::TRANCADO) {}
+
+    void trancar() {
+        switch (estadoAtual) {
+            case EstadoCadeado::TRANCADO:
+                std::cout << "O cadeado já está trancado." << std::endl;
+                break;
+            case EstadoCadeado::DESTRANCADO:
+                std::cout << "Cadeado trancado." << std::endl;
+                estadoAtual = EstadoCadeado::TRANCADO;
+                break;
+            case EstadoCadeado::ABERTO:
+                std::cout << "Você não pode trancar o cadeado enquanto ele estiver aberto." << std::endl;
+                break;
+        }
+    }
+
+    void destrancar() {
+        switch (estadoAtual) {
+            case EstadoCadeado::TRANCADO:
+                std::cout << "Cadeado destrancado." << std::endl;
+                estadoAtual = EstadoCadeado::DESTRANCADO;
+                break;
+            case EstadoCadeado::DESTRANCADO:
+                std::cout << "O cadeado já está destrancado." << std::endl;
+                break;
+            case EstadoCadeado::ABERTO:
+                std::cout << "Você não pode destrancar o cadeado enquanto ele estiver aberto." << std::endl;
+                break;
+        }
+    }
+
+    void abrir() {
+        switch (estadoAtual) {
+            case EstadoCadeado::TRANCADO:
+                std::cout << "Você não pode abrir o cadeado porque ele está trancado." << std::endl;
+                break;
+            case EstadoCadeado::DESTRANCADO:
+                std::cout << "Cadeado aberto." << std::endl;
+                estadoAtual = EstadoCadeado::ABERTO;
+                break;
+            case EstadoCadeado::ABERTO:
+                std::cout << "O cadeado já está aberto." << std::endl;
+                break;
+        }
+    }
+};
+
+int main() {
+    Cadeado cadeado;
+
+    cadeado.trancar();
+    cadeado.destrancar();
+    cadeado.abrir();
+    cadeado.destrancar();
+    cadeado.abrir();
+    cadeado.trancar();
+
+    return 0;
+}
+
+*/
